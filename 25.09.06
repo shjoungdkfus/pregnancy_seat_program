@@ -1,0 +1,55 @@
+Postgres 연결 (Supabase)
+
+1. 보고서 기반 설계
+이미 6월 기말과제 보고서에 아이디어, 문제 정의, 사용자 시나리오, DB 설계, 테스트 항목까지 정리돼 있음
+→ 즉, “요구정의”와 “설계 문서”는 끝난 상태.
+
+2. 레포/환경 세팅
+GitHub 레포 생성 및 기본 폴더 구조 (backend/, dashboard/, etl/, db/, docs/) 마련
+.gitignore, requirements.txt 정리
+Python 가상환경(.venv) 만들고, fastapi, uvicorn, pandas, sqlalchemy, streamlit 등 설치 완료
+FastAPI 뼈대
+backend/main.py 작성
+uvicorn backend.main:app --reload → {"message":"Hello, FastAPI is working!"} 확인
+http://127.0.0.1:8000/docs
+ → 자동 문서 페이지 열림 확인
+
+3. 지금까지 착수 중 (STEP 2-A)
+/health 엔드포인트 추가 예정 (서버 상태 확인용)
+/stats/usage 임시 가짜 데이터 API 준비 (Streamlit 대시보드 테스트용)
+👉 이 단계까지 하면 “DB 없이도” API ↔ 대시보드 연동 테스트가 가능해짐.
+
+4. 다음 예정 (STEP 2-B ~)
+Postgres 연결 (Supabase)
+
+Supabase 프로젝트 생성 → Connection string → .env → SQLAlchemy 엔진 연결
+/dev/seed, /stats/usage 엔드포인트 DB 버전으로 교체
+대시보드 연동 (STEP 3)
+Streamlit에서 /stats/usage 불러와서 선그래프/테이블 시각화
+
+완료: 설계/문서, 환경세팅, FastAPI 기본 실행
+
+진행 중: STEP 2-A (임시 API 만들기)
+
+앞으로: STEP 2-B(Postgres 연결) → STEP 3(Streamlit 대시보드)
+
+1. cmd에서 작업 파일로 이동
+cd pregnancy_seat_program
+
+2. 가상환경 활성화
+.\.venv\Scripts\activate.bat
+
+3. 현재 파일 위치
+dir /a
+
+4. 파일 뒤로 가기
+cd..
+
+5. API 열기
+uvicorn backend.main:app --reload
+http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/health
+http://127.0.0.1:8000/stats/usage
+
+6. 백엔드 파이썬 열기
+backend\main.py
