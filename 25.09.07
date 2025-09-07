@@ -1,3 +1,6 @@
+- env 새로운 대안으로 접근하기
+- 지금까지 작업 또 정리해서 새롭게 시작하기
+
 1. env를 읽기 위해 python-dotenv가 설치되어있어야 함
 안 그러면 DB_URL이 비어져있어서 가짜 데이터만 가져옴
 pip install fastapi uvicorn python-dotenv sqlalchemy psycopg2-binary pandas requests streamlit
@@ -18,3 +21,6 @@ Wjdtjdgjs12!
 파일을 받아오지 못하고 에러가 뜸
 1) URL 실패
 2) URL 없이 해도 실패
+3) 마지막 대안 실행해보기
+ - .env 
+4) 돌려막기식으로 해결하지 말고 제대로 알아보기
