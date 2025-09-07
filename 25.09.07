@@ -1,0 +1,20 @@
+1. env를 읽기 위해 python-dotenv가 설치되어있어야 함
+안 그러면 DB_URL이 비어져있어서 가짜 데이터만 가져옴
+pip install fastapi uvicorn python-dotenv sqlalchemy psycopg2-binary pandas requests streamlit
+
+이를 통해 2-B로 전환 즉 
+
+2. env 설정을 위해 파일을 생성하고 동작시킴
+DB_URL=postgresql+psycopg2://postgres:<PW>@db.xxxxxx.supabase.co:5432/postgres
+SECRET=change_me
+API_BASE_URL=http://127.0.0.1:8000
+TZ=Asia/Seoul
+
+3. Supabase 계정 깃허브와 연동하여 생성
+Wjdtjdgjs12!
+
+4. 서버, DB 연동하는 것 에러떠서 실패
+.env 파일을 받아와서 서버 여는 것 실패
+파일을 받아오지 못하고 에러가 뜸
+1) URL 실패
+2) URL 없이 해도 실패
